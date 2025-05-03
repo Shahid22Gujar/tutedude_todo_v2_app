@@ -9,7 +9,7 @@ const TodoList = () => {
 
   const filtered = todos.filter(todo =>
     todo.text.toLowerCase().includes(search.toLowerCase())
-  );
+  )?todos:[];
 
   return (
     <>
