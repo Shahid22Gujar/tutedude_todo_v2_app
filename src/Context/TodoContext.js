@@ -4,7 +4,6 @@ export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     const stored = localStorage.getItem('todos');
-    console.log(stored,'testign shahiidd')
     if (stored) setTodos(JSON.parse(stored));
   }, []);
 

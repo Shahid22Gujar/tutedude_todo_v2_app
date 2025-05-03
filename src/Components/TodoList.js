@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const TodoList = () => {
   const { todos, deleteTodo, clearTodos } = useContext(TodoContext);
   const [search, setSearch] = useState('');
-  console.log(todos,typeof(todos))
   const filtered = todos.filter(todo =>
     todo.text.toLowerCase().includes(search.toLowerCase())
   );
