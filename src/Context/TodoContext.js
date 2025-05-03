@@ -1,7 +1,7 @@
 import { useEffect,createContext,useState } from "react";
 export const TodoContext = createContext();
 export const TodoProvider = ({ children }) => {
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')));
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos'))?localStorage.getItem('todos'):[]);
 
   useEffect(() => {
     const stored = localStorage.getItem('todos');
