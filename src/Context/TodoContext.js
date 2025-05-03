@@ -1,10 +1,10 @@
 import { useEffect,createContext,useState } from "react";
 export const TodoContext = createContext();
 export const TodoProvider = ({ children }) => {
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos'))?localStorage.getItem('todos'):[]);
-  console.log(JSON.parse(localStorage.getItem('todos')),typeof(JSON.parse(localStorage.getItem('todos'))),'shahid')
+  const [todos, setTodos] = useState([]);
   useEffect(() => {
     const stored = localStorage.getItem('todos');
+    console.log(stored,'testign shahiidd')
     if (stored) setTodos(JSON.parse(stored));
   }, []);
 
