@@ -22,7 +22,6 @@ export const TodoProvider = ({ children }) => {
   const clearTodos = () => {
     setTodos([]);
   };
-  console.log(todos)
 
   return (
     <TodoContext.Provider value={{ todos, addTodo, deleteTodo, clearTodos }}>
